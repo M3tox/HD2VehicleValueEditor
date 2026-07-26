@@ -5,6 +5,7 @@
 #include <wx/filedlg.h>
 #include <wx/wfstream.h>
 
+#include <cstdint>
 #include "VehicleVals.h"
 
 
