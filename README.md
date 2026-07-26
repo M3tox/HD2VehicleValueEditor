@@ -8,3 +8,30 @@ This code is from 2022. I have not looked at it since then and it probably has a
 
 # For developers
 If you want to compile it you must link it with wxWidgets! This is the only additional library that you need to compile this code.
+
+# Linux
+### 1. Install Dependencies
+
+* **Arch Linux**
+  ```bash
+  sudo pacman -S wxwidgets-gtk3 base-devel
+  ```
+* **Debian/Ubuntu/Mint**
+  ```bash
+  sudo apt install libwxgtk3.2-dev build-essential
+  ```
+* **Fedora/RHEL**
+  ```bash
+  sudo dnf install wxGTK-devel gcc-c++
+  ```
+
+### 2. Clone
+  ```bash
+  git clone https://github.com/M3tox/HD2VehicleValueEditor.git
+  cd HD2VehicleValueEditor
+  ```
+    
+### 3. Compile!
+  ```bash
+  g++ *.cpp `wx-config --cxxflags --libs` -o output
+  ```
