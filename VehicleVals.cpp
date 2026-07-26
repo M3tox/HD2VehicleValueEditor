@@ -563,7 +563,7 @@ VehicleVals::VehicleVals(const std::string& filePath) {
 }
 
 void VehicleVals::writeTextFile(const std::string& filePath) {
-    std::ofstream newFile(filePath, std::ios::binary, std::ios::trunc);
+    std::ofstream newFile(filePath, std::ios::binary|std::ios::trunc);
 
     newFile << "Vehicle data from table " << fileName << ", version 1.03" << '\n';
 
@@ -593,7 +593,7 @@ void VehicleVals::writeTextFile(const std::string& filePath) {
 }
 
 void VehicleVals::writeBinaryFile(const std::string& filePath) {
-    std::ofstream newFile(filePath, std::ios::binary, std::ios::trunc);
+    std::ofstream newFile(filePath, std::ios::binary|std::ios::trunc);
     for (auto& sec : sections) {
         for (uint32_t i = 0; i < sec.getItemCount(); i++) {
             sec.writeItemData(newFile, i);
